@@ -1,0 +1,57 @@
+<style>
+.palindrome{
+    width:100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width:400px;
+    height:250px;
+    text-transform: uppercase;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+.letter{    
+    font-size: 20px;
+    
+}
+</style>
+<html>
+    <body>
+        <div class="palindrome">
+            <div class="box">
+                <div class="letter">Palindrome Checcking</div>
+                <div class="hello"><input type="text" id="entry"></div>
+                <div class="btn"><button onclick="convert()">Check</button></div>
+                <div id="result"></div>
+            </div>
+        </div>
+        <script>
+            function convert(){
+                let entries=document.getElementById("entry").value
+                let store=entries.split("")
+                let store1=store.reverse()
+                let store3=store1.join("")
+                if(entries == store3){
+                    rate="palindrome"
+
+                }
+                else{
+                    rate="not  a  palindrome"
+                }
+                let resul=document.getElementById("result").innerHTML=rate
+            }
+
+            
+        </script>
+    </body>
+</html>
